@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Poking landing page</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <link rel="stylesheet" href="styles/app.css">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="images/banner.png" id="banner">
+            <img src="images/poking.png" id="poking">
+            </br>
+            <h3 id="poking_sentence">The web application for managing events and rankings in a physical poker club, with registrations, statistics and PDF export.</h3>
+            <nav>
+                <ul>
+                    <li><a href="#demo" class="{% if app.request.attributes.get('_route') in ['app_event_listing', 'app_event_create', 'app_event_view', 'app_event_update'] %}active{% endif %}">DEMO</a></li>
+                    <li><a href="#events" class="{% if app.request.attributes.get('_route') in ['app_event_listing', 'app_event_create', 'app_event_view', 'app_event_update'] %}active{% endif %}">EVENT</a></li>
+                    <li><a href="#rankings" class="{% if app.request.attributes.get('_route') in ['app_rancking_listing', 'app_rancking_view_general', 'app_rancking_view', 'app_rancking_create'] %}active{% endif %}">RANKING</a></li>
+                    <li><a href="#statistics" class="{% if app.request.attributes.get('_route') == 'app_statistics' %}active{% endif %}">STATISTICS</a></li>
+                    <li><a href="#about-us" class="{% if app.request.attributes.get('_route') == 'app_my_account' %}active{% endif %}">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <img src="images/patternGauche.png" class="pattern">
+            <div id="main_content">
+                </br>
+                </br>
+                </br>
+                <h2 id="demo" class="text_center">DEMO</h2>
+                <p class="paragraph text_center">As my site as not yet been deployed, you can discover it by clicking on the video below.   video en dessous : balise video + source</p>
+                <div class="div_parent_demo">
+                    <div class="child_div_demo"></div>
+                    <div class="child_middle_div_demo">
+                        <img src="images/screen_event_registration_feature.jpg" class="size_videos_images">
+                    </div>
+                    <div class="child_div_demo"></div>
+                </div>
+                </br>
+                </br>
+                </br>
+                <hr>
+                </br>
+                </br>
+                </br>
+                <div id="events" class="div_parent_feature">
+                    <div class="left_div_feature">
+                        <img src="images/screen_event_registration_feature.jpg" class="size_videos_images">
+                    </div>
+                    <div class="right_div_feature">
+                        <h2>Register now so you don't miss out any of our upcoming event</h2>
+                        </br>
+                        <p class="paragraph">See the details of the event you wish to attend. Register to reserve your place.
+                            Just click on the Register button and you will appear on the list of registered participants, guaranteeing your place!
+                            If you can't make it, don't hesitate to unsubscribe by clicking on the Unregister button.</p>
+                    </div>
+                </div>
+                </br>
+                </br>
+                </br>
+                <div id="rankings" class="div_parent_feature">
+                    <div class="left_div_feature">
+                        <h2>Find out where you stand in the event ranking and aim for the top</h2>
+                        </br>
+                        <p class="paragraph">Would you like to know where you currently stand in a particular event and understand how you can progress from event to event?
+                            See how many points you have scored and how many players you have eliminated so you can adapt your game accordingly.
+                        </p>
+                    </div>
+                    <div class="right_div_feature">
+                        <img src="images/screen_rankings_feature.jpg" class="size_videos_images">
+                    </div>
+                </div>
+                </br>
+                </br>
+                </br>
+                <div id="statistics" class="div_parent_feature">
+                    <div class="left_div_feature">
+                        <img src="images/screen_statistics_feature.jpg" class="size_videos_images">
+                    </div>
+                    <div class="right_div_feature">
+                        <h2>Optimise your strategies with our statistics</h2>
+                        </br>
+                        <p class="paragraph">With our statistics calculator, obtaining probalities is simple!
+                            Enter your cards, click on the Get statistics button and let our tool do the rest.
+                            Instantly see valuable information to help you optimise your performance.
+                        </p>
+                    </div>
+                </div>
+                </br>
+                </br>
+                </br>
+                <hr>
+                </br>
+                </br>
+                </br>
+                <h2 id="about-us">About PoKing</h2>
+                <p class="paragraph">The idea for this project came from personal experience. As a member of a poker club in 2023, I noticed a
+                    few shortcomings in terms of operations. For example, registrations were managed manually on a sheet of
+                    paper, and rankings were calculated in Excel. I therefore felt it was necessary to automate these functions
+                    by creating a site that would make it easier for the club to manage events and their rankings.</p>
+                <p class="paragraph">The site took 6 weeks to build, with 1 week spent researching the documentation, 3 weeks setting up the
+                    back end and 2 weeks on the design.</p>
+                <p class="paragraph">If you'd like to find out more about my Poking project, go to <a href="https://github.com/git-alexis/holbertonschool-porfolio-PoKing" class="link">https://github.com/git-alexis/holbertonschool-porfolio-PoKing</a>.
+                    My <a href="https://github.com/git-alexis" class="link">Github</a> will take you to all the other Holberton School projects, including the <a href="https://github.com/git-alexis/holbertonschool-Landing-Page-PoKing" class="link">Landing Page</a>.
+                    Don't hesitate to check out my <a href="https://www.linkedin.com/in/alexis-billemont-a985612a8/" class="link">Linkedin</a> and <a href="https://x.com/AlexisBill6697" class="link">Twitter</a> accounts to get to know me better!</p>
+                </br>
+                </br>
+                </br>
+            </div>
+            <img src="images/patternDroite.png" class="pattern">
+        </main>
+        <footer>
+            <div class="footer_child">
+                <p class="footer_p">© POKING</p>
+                <p class="footer_p">107 Rue de Babylone,</br>59650 Villeneuve-d'Ascq</p>
+            </div>
+            <div class="footer_child">
+                <p class="footer_p">Contact us :</p>
+                <p class="footer_p">E-mail : alex59.billemont@gmail.com</br>Phone number : 06.84.66.51.67</p>
+            </div>
+        </footer>
+    </body>
+</html>
